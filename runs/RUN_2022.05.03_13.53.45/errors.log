@@ -1,0 +1,6 @@
+[ERROR]: during executing: "yosys -c /openlane/scripts/yosys/synth.tcl -l /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/logs/synthesis/1-synthesis.log |& tee >&@stdout"
+[ERROR]: Exit code: 1
+[ERROR]: Last 10 lines:
+child process exited abnormally
+
+[ERROR]: Flow failed.

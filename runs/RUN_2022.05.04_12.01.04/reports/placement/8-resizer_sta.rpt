@@ -1,0 +1,38 @@
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: _05_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_digit (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.07    0.00    0.00 ^ _05_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                  0.19    0.44    0.44 ^ _05_/Q (sky130_fd_sc_hd__dfxtp_1)
+     2    0.02                           net2 (net)
+                  0.19    0.00    0.44 ^ output2/A (sky130_fd_sc_hd__buf_2)
+                  0.18    0.26    0.70 ^ output2/X (sky130_fd_sc_hd__buf_2)
+     1    0.03                           seven_segment_digit (net)
+                  0.18    0.00    0.70 ^ seven_segment_digit (out)
+                                  0.70   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -0.70   data arrival time
+-----------------------------------------------------------------------------
+                                  7.05   slack (MET)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.

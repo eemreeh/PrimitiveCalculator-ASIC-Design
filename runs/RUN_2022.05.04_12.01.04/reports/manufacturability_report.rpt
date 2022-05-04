@@ -1,0 +1,19 @@
+Design Name: PrimitiveCalculator
+Run Directory: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/reports/finishing/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/logs/finishing/31-PrimitiveCalculator.lvs.lef.log
+LVS reports no net, device, pin, or property mismatches.
+Total errors = 0
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/reports/finishing/antenna.rpt
+Number of pins violated: 0
+Number of nets violated: 0

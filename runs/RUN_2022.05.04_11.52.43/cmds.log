@@ -1,0 +1,34 @@
+Wed May 04 11:52:45 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -i /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef -o /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Wed May 04 11:52:45 UTC 2022 - Executing "openroad -python /openlane/scripts/mergeLib.py --output /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/synthesis/merged.lib --name sky130A_merged /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Wed May 04 11:52:49 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/synthesis/trimmed.lib /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/synthesis/merged.lib"
+
+Wed May 04 11:52:50 UTC 2022 - Executing "echo {openlane 2022.02.23_02.50.41} > /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/OPENLANE_VERSION"
+
+Wed May 04 11:52:50 UTC 2022 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/emre/ASIC/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/routing/config.tracks"
+
+Wed May 04 11:52:51 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Wed May 04 11:52:51 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl -l /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/logs/synthesis/1-synthesis.log |& tee >&@stdout"
+
+Wed May 04 11:52:53 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/PrimitiveCalculator\/runs\/RUN_2022.05.04_11.52.43\/results\/synthesis\/PrimitiveCalculator.v/} /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/config.tcl"
+
+Wed May 04 11:52:53 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/config.tcl"
+
+Wed May 04 11:52:53 UTC 2022 - Executing "sed -i /defparam/d /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/results/synthesis/PrimitiveCalculator.v"
+
+Wed May 04 11:52:53 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl"
+
+Wed May 04 11:52:54 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl"
+
+Wed May 04 11:52:55 UTC 2022 - Executing "openroad -python /openlane/scripts/defutil.py extract_core_dims --output-data /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/dimensions.txt --input-lef /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/merged.lef /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/tmp/floorplan/3-initial_fp.def"
+
+Wed May 04 11:52:55 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/ioplacer.tcl"
+
+Wed May 04 11:52:56 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl"
+
+Wed May 04 11:52:56 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl"
+
+Wed May 04 11:52:57 UTC 2022 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /openlane/designs/PrimitiveCalculator --design_name PrimitiveCalculator --tag RUN_2022.05.04_11.52.43 --output_file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/reports/final_summary_report.csv --man_report /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43/reports/manufacturability_report.rpt --run_path /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_11.52.43"
+

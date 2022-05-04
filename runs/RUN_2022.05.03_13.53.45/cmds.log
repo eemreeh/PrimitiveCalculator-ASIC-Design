@@ -1,0 +1,16 @@
+Tue May 03 13:53:47 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -i /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef -o /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Tue May 03 13:53:47 UTC 2022 - Executing "openroad -python /openlane/scripts/mergeLib.py --output /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/synthesis/merged.lib --name sky130A_merged /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Tue May 03 13:53:52 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/synthesis/trimmed.lib /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/synthesis/merged.lib"
+
+Tue May 03 13:53:52 UTC 2022 - Executing "echo {openlane 2022.02.23_02.50.41} > /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/OPENLANE_VERSION"
+
+Tue May 03 13:53:52 UTC 2022 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/emre/ASIC/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/routing/config.tracks"
+
+Tue May 03 13:53:53 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Tue May 03 13:53:53 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl -l /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/logs/synthesis/1-synthesis.log |& tee >&@stdout"
+
+Tue May 03 13:53:54 UTC 2022 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /openlane/designs/PrimitiveCalculator --design_name PrimitiveCalculator --tag RUN_2022.05.03_13.53.45 --output_file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/reports/final_summary_report.csv --man_report /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45/reports/manufacturability_report.rpt --run_path /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.03_13.53.45"
+

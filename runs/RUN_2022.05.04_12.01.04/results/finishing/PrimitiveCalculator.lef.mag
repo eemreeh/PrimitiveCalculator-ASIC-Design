@@ -1,0 +1,111 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1651665733
+<< obsli1 >>
+rect 1104 2159 38824 37553
+<< obsm1 >>
+rect 1104 2128 38824 37584
+<< metal2 >>
+rect 3238 39200 3294 40000
+rect 13542 39200 13598 40000
+rect 23846 39200 23902 40000
+rect 34150 39200 34206 40000
+rect 18 0 74 800
+rect 10322 0 10378 800
+rect 20626 0 20682 800
+rect 30930 0 30986 800
+<< obsm2 >>
+rect 1398 39144 3182 39200
+rect 3350 39144 13486 39200
+rect 13654 39144 23790 39200
+rect 23958 39144 34094 39200
+rect 34262 39144 38252 39200
+rect 1398 856 38252 39144
+rect 1398 800 10266 856
+rect 10434 800 20570 856
+rect 20738 800 30874 856
+rect 31042 800 38252 856
+<< metal3 >>
+rect 39200 34008 40000 34128
+rect 0 32648 800 32768
+rect 39200 23128 40000 23248
+rect 0 21768 800 21888
+rect 39200 12248 40000 12368
+rect 0 10888 800 11008
+rect 39200 1368 40000 1488
+<< obsm3 >>
+rect 800 34208 39200 37569
+rect 800 33928 39120 34208
+rect 800 32848 39200 33928
+rect 880 32568 39200 32848
+rect 800 23328 39200 32568
+rect 800 23048 39120 23328
+rect 800 21968 39200 23048
+rect 880 21688 39200 21968
+rect 800 12448 39200 21688
+rect 800 12168 39120 12448
+rect 800 11088 39200 12168
+rect 880 10808 39200 11088
+rect 800 1568 39200 10808
+rect 800 1395 39120 1568
+<< metal4 >>
+rect 4208 2128 4528 37584
+rect 19568 2128 19888 37584
+rect 34928 2128 35248 37584
+<< metal5 >>
+rect 1104 35934 38824 36254
+rect 1104 20616 38824 20936
+rect 1104 5298 38824 5618
+<< labels >>
+rlabel metal5 s 1104 20616 38824 20936 6 VGND
+port 1 nsew ground input
+rlabel metal4 s 19568 2128 19888 37584 6 VGND
+port 1 nsew ground input
+rlabel metal5 s 1104 5298 38824 5618 6 VPWR
+port 2 nsew power input
+rlabel metal5 s 1104 35934 38824 36254 6 VPWR
+port 2 nsew power input
+rlabel metal4 s 4208 2128 4528 37584 6 VPWR
+port 2 nsew power input
+rlabel metal4 s 34928 2128 35248 37584 6 VPWR
+port 2 nsew power input
+rlabel metal3 s 39200 23128 40000 23248 6 clk
+port 3 nsew signal input
+rlabel metal2 s 13542 39200 13598 40000 6 led_flag
+port 4 nsew signal output
+rlabel metal2 s 30930 0 30986 800 6 restart
+port 5 nsew signal input
+rlabel metal2 s 23846 39200 23902 40000 6 rotary_a
+port 6 nsew signal input
+rlabel metal2 s 18 0 74 800 6 rotary_b
+port 7 nsew signal input
+rlabel metal3 s 0 21768 800 21888 6 rst
+port 8 nsew signal input
+rlabel metal2 s 10322 0 10378 800 6 select
+port 9 nsew signal input
+rlabel metal3 s 39200 1368 40000 1488 6 seven_segment_digit
+port 10 nsew signal output
+rlabel metal3 s 0 10888 800 11008 6 seven_segment_out[0]
+port 11 nsew signal output
+rlabel metal3 s 39200 34008 40000 34128 6 seven_segment_out[1]
+port 12 nsew signal output
+rlabel metal2 s 34150 39200 34206 40000 6 seven_segment_out[2]
+port 13 nsew signal output
+rlabel metal2 s 20626 0 20682 800 6 seven_segment_out[3]
+port 14 nsew signal output
+rlabel metal3 s 0 32648 800 32768 6 seven_segment_out[4]
+port 15 nsew signal output
+rlabel metal2 s 3238 39200 3294 40000 6 seven_segment_out[5]
+port 16 nsew signal output
+rlabel metal3 s 39200 12248 40000 12368 6 seven_segment_out[6]
+port 17 nsew signal output
+<< properties >>
+string FIXED_BBOX 0 0 40000 40000
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 433826
+string GDS_FILE /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/results/finishing/PrimitiveCalculator.magic.gds
+string GDS_START 44406
+<< end >>
+

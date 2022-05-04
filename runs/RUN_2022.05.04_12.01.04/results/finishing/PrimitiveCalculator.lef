@@ -1,0 +1,196 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO PrimitiveCalculator
+  CLASS BLOCK ;
+  FOREIGN PrimitiveCalculator ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 200.000 BY 200.000 ;
+  PIN VGND
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 103.080 194.120 104.680 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 97.840 10.640 99.440 187.920 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met5 ;
+        RECT 5.520 26.490 194.120 28.090 ;
+    END
+    PORT
+      LAYER met5 ;
+        RECT 5.520 179.670 194.120 181.270 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 187.920 ;
+    END
+    PORT
+      LAYER met4 ;
+        RECT 174.640 10.640 176.240 187.920 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 196.000 115.640 200.000 116.240 ;
+    END
+  END clk
+  PIN led_flag
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 67.710 196.000 67.990 200.000 ;
+    END
+  END led_flag
+  PIN restart
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 154.650 0.000 154.930 4.000 ;
+    END
+  END restart
+  PIN rotary_a
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 119.230 196.000 119.510 200.000 ;
+    END
+  END rotary_a
+  PIN rotary_b
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END rotary_b
+  PIN rst
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 108.840 4.000 109.440 ;
+    END
+  END rst
+  PIN select
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 51.610 0.000 51.890 4.000 ;
+    END
+  END select
+  PIN seven_segment_digit
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 196.000 6.840 200.000 7.440 ;
+    END
+  END seven_segment_digit
+  PIN seven_segment_out[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 54.440 4.000 55.040 ;
+    END
+  END seven_segment_out[0]
+  PIN seven_segment_out[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 196.000 170.040 200.000 170.640 ;
+    END
+  END seven_segment_out[1]
+  PIN seven_segment_out[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 170.750 196.000 171.030 200.000 ;
+    END
+  END seven_segment_out[2]
+  PIN seven_segment_out[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 103.130 0.000 103.410 4.000 ;
+    END
+  END seven_segment_out[3]
+  PIN seven_segment_out[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 163.240 4.000 163.840 ;
+    END
+  END seven_segment_out[4]
+  PIN seven_segment_out[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 16.190 196.000 16.470 200.000 ;
+    END
+  END seven_segment_out[5]
+  PIN seven_segment_out[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 196.000 61.240 200.000 61.840 ;
+    END
+  END seven_segment_out[6]
+  OBS
+      LAYER li1 ;
+        RECT 5.520 10.795 194.120 187.765 ;
+      LAYER met1 ;
+        RECT 5.520 10.640 194.120 187.920 ;
+      LAYER met2 ;
+        RECT 6.990 195.720 15.910 196.000 ;
+        RECT 16.750 195.720 67.430 196.000 ;
+        RECT 68.270 195.720 118.950 196.000 ;
+        RECT 119.790 195.720 170.470 196.000 ;
+        RECT 171.310 195.720 191.260 196.000 ;
+        RECT 6.990 4.280 191.260 195.720 ;
+        RECT 6.990 4.000 51.330 4.280 ;
+        RECT 52.170 4.000 102.850 4.280 ;
+        RECT 103.690 4.000 154.370 4.280 ;
+        RECT 155.210 4.000 191.260 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 171.040 196.000 187.845 ;
+        RECT 4.000 169.640 195.600 171.040 ;
+        RECT 4.000 164.240 196.000 169.640 ;
+        RECT 4.400 162.840 196.000 164.240 ;
+        RECT 4.000 116.640 196.000 162.840 ;
+        RECT 4.000 115.240 195.600 116.640 ;
+        RECT 4.000 109.840 196.000 115.240 ;
+        RECT 4.400 108.440 196.000 109.840 ;
+        RECT 4.000 62.240 196.000 108.440 ;
+        RECT 4.000 60.840 195.600 62.240 ;
+        RECT 4.000 55.440 196.000 60.840 ;
+        RECT 4.400 54.040 196.000 55.440 ;
+        RECT 4.000 7.840 196.000 54.040 ;
+        RECT 4.000 6.975 195.600 7.840 ;
+  END
+END PrimitiveCalculator
+END LIBRARY
+

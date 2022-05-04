@@ -1,0 +1,34 @@
+OpenROAD 8d53e9b018dec98fa63e907ddeb6c5406f035361 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/tmp/merged_unpadded.lef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/tmp/merged_unpadded.lef
+[WARNING ORD-0033] -order_wires is deprecated.
+[INFO ODB-0127] Reading DEF file: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/results/routing/PrimitiveCalculator.def
+[INFO ODB-0128] Design: PrimitiveCalculator
+[INFO ODB-0130]     Created 17 pins.
+[INFO ODB-0131]     Created 3441 components and 12858 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 12826 connections.
+[INFO ODB-0133]     Created 20 nets and 24 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/results/routing/PrimitiveCalculator.def
+[INFO]: Setting RC values...
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0008] extracting parasitics of PrimitiveCalculator ...
+Notice 0: Split top of 1 T shapes.
+[INFO RCX-0435] Reading extraction model file /home/emre/ASIC/pdk/sky130A/libs.tech/openlane/rcx_rules.info ...
+[INFO RCX-0436] RC segment generation PrimitiveCalculator (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 25 rc segments
+[INFO RCX-0439] Coupling Cap extraction PrimitiveCalculator ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0043] 117 wires to be extracted
+[INFO RCX-0442] 77% completion -- 91 wires have been extracted
+[INFO RCX-0442] 100% completion -- 117 wires have been extracted
+[INFO RCX-0045] Extract 20 nets, 41 rsegs, 41 caps, 13 ccs
+[INFO RCX-0015] Finished extracting PrimitiveCalculator.
+[INFO RCX-0016] Writing SPEF ...
+[INFO RCX-0443] 20 nets finished
+[INFO RCX-0017] Finished writing SPEF ...

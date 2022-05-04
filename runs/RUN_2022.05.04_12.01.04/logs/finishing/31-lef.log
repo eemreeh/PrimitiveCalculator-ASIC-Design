@@ -1,0 +1,119 @@
+Netgen 1.5.219 compiled on Wed Feb  9 05:50:10 UTC 2022
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Reading netlist file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/results/finishing/PrimitiveCalculator.spice
+Reading netlist file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/tmp/finishing/28-powered_netlist.v
+Warning:  A case-insensitive file has been read and so the	verilog file must be treated case-insensitive to match.
+Creating placeholder cell definition for module sky130_fd_sc_hd__decap_3.
+Creating placeholder cell definition for module sky130_fd_sc_hd__decap_12.
+Creating placeholder cell definition for module sky130_fd_sc_hd__decap_4.
+Creating placeholder cell definition for module sky130_fd_sc_hd__decap_8.
+Creating placeholder cell definition for module sky130_fd_sc_hd__fill_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__decap_6.
+Creating placeholder cell definition for module sky130_fd_sc_hd__fill_2.
+Creating placeholder cell definition for module sky130_fd_sc_hd__tapvpwrvgnd_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__nor2_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__dfxtp_1.
+Creating placeholder cell definition for module sky130_fd_sc_hd__conb_1.
+Note:  Implicit pin HI in instance _12__3 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _06__5 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _07__6 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _08__7 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _09__8 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _10__9 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin LO in instance _11__10 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Note:  Implicit pin HI in instance _13__4 of sky130_fd_sc_hd__conb_1 in cell PrimitiveCalculator
+Creating placeholder cell definition for module sky130_fd_sc_hd__buf_2.
+Reading setup file /home/emre/ASIC/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+Comparison output logged to file /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/logs/finishing/31-PrimitiveCalculator.lef.log
+Logging to file "/openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/logs/finishing/31-PrimitiveCalculator.lef.log" enabled
+Circuit sky130_fd_sc_hd__decap_8 contains no devices.
+Circuit sky130_fd_sc_hd__tapvpwrvgnd_1 contains no devices.
+Circuit sky130_fd_sc_hd__decap_12 contains no devices.
+Circuit sky130_fd_sc_hd__decap_6 contains no devices.
+Circuit sky130_fd_sc_hd__fill_1 contains no devices.
+Circuit sky130_fd_sc_hd__decap_4 contains no devices.
+Circuit sky130_fd_sc_hd__fill_2 contains no devices.
+Circuit sky130_fd_sc_hd__decap_3 contains no devices.
+Circuit sky130_fd_sc_hd__conb_1 contains no devices.
+Circuit sky130_fd_sc_hd__dfxtp_1 contains no devices.
+Circuit sky130_fd_sc_hd__buf_2 contains no devices.
+Circuit sky130_fd_sc_hd__nor2_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'PrimitiveCalculator'
+Circuit PrimitiveCalculator contains 3441 device instances.
+  Class: sky130_fd_sc_hd__dfxtp_1 instances:   2
+  Class: sky130_fd_sc_hd__buf_2 instances:   2
+  Class: sky130_fd_sc_hd__conb_1 instances:   8
+  Class: sky130_fd_sc_hd__decap_3 instances: 152
+  Class: sky130_fd_sc_hd__decap_4 instances:  40
+  Class: sky130_fd_sc_hd__decap_6 instances: 410
+  Class: sky130_fd_sc_hd__decap_8 instances:   6
+  Class: sky130_fd_sc_hd__tapvpwrvgnd_1 instances: 469
+  Class: sky130_fd_sc_hd__fill_1 instances: 443
+  Class: sky130_fd_sc_hd__fill_2 instances:  34
+  Class: sky130_fd_sc_hd__decap_12 instances: 1873
+  Class: sky130_fd_sc_hd__nor2_1 instances:   2
+Circuit contains 26 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'PrimitiveCalculator'
+Circuit PrimitiveCalculator contains 3441 device instances.
+  Class: sky130_fd_sc_hd__dfxtp_1 instances:   2
+  Class: sky130_fd_sc_hd__buf_2 instances:   2
+  Class: sky130_fd_sc_hd__conb_1 instances:   8
+  Class: sky130_fd_sc_hd__decap_3 instances: 152
+  Class: sky130_fd_sc_hd__decap_4 instances:  40
+  Class: sky130_fd_sc_hd__decap_6 instances: 410
+  Class: sky130_fd_sc_hd__decap_8 instances:   6
+  Class: sky130_fd_sc_hd__tapvpwrvgnd_1 instances: 469
+  Class: sky130_fd_sc_hd__fill_1 instances: 443
+  Class: sky130_fd_sc_hd__fill_2 instances:  34
+  Class: sky130_fd_sc_hd__decap_12 instances: 1873
+  Class: sky130_fd_sc_hd__nor2_1 instances:   2
+Circuit contains 26 nets, and 4 disconnected pins.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'PrimitiveCalculator'
+Circuit PrimitiveCalculator contains 22 device instances.
+  Class: sky130_fd_sc_hd__dfxtp_1 instances:   2
+  Class: sky130_fd_sc_hd__buf_2 instances:   2
+  Class: sky130_fd_sc_hd__conb_1 instances:   8
+  Class: sky130_fd_sc_hd__decap_3 instances:   1
+  Class: sky130_fd_sc_hd__decap_4 instances:   1
+  Class: sky130_fd_sc_hd__decap_6 instances:   1
+  Class: sky130_fd_sc_hd__decap_8 instances:   1
+  Class: sky130_fd_sc_hd__tapvpwrvgnd_1 instances:   1
+  Class: sky130_fd_sc_hd__fill_1 instances:   1
+  Class: sky130_fd_sc_hd__fill_2 instances:   1
+  Class: sky130_fd_sc_hd__decap_12 instances:   1
+  Class: sky130_fd_sc_hd__nor2_1 instances:   2
+Circuit contains 26 nets, and 4 disconnected pins.
+Contents of circuit 2:  Circuit: 'PrimitiveCalculator'
+Circuit PrimitiveCalculator contains 22 device instances.
+  Class: sky130_fd_sc_hd__dfxtp_1 instances:   2
+  Class: sky130_fd_sc_hd__buf_2 instances:   2
+  Class: sky130_fd_sc_hd__conb_1 instances:   8
+  Class: sky130_fd_sc_hd__decap_3 instances:   1
+  Class: sky130_fd_sc_hd__decap_4 instances:   1
+  Class: sky130_fd_sc_hd__decap_6 instances:   1
+  Class: sky130_fd_sc_hd__decap_8 instances:   1
+  Class: sky130_fd_sc_hd__tapvpwrvgnd_1 instances:   1
+  Class: sky130_fd_sc_hd__fill_1 instances:   1
+  Class: sky130_fd_sc_hd__fill_2 instances:   1
+  Class: sky130_fd_sc_hd__decap_12 instances:   1
+  Class: sky130_fd_sc_hd__nor2_1 instances:   2
+Circuit contains 26 nets, and 4 disconnected pins.
+
+Circuit 1 contains 22 devices, Circuit 2 contains 22 devices.
+Circuit 1 contains 26 nets,    Circuit 2 contains 26 nets.
+
+Circuits match with 3 symmetries.
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+Result: Circuits match uniquely.
+Logging to file "/openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/logs/finishing/31-PrimitiveCalculator.lef.log" disabled
+LVS Done.
