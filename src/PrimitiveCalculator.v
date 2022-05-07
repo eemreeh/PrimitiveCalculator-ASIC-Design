@@ -66,53 +66,51 @@ module PrimitiveCalculator (
         end else begin 
             current_state <= next_state;
         end
-    end
 
-    always @(*) begin 
         case (current_state)
             START: begin 
                 if (restart_debounce) begin
-                    next_state = START;
+                    next_state <= START;
                 end else if (select_pressed) begin 
-                    next_state = FIRST_INPUT;
+                    next_state <= FIRST_INPUT;
                 end else begin
-                    next_state = current_state;
+                    next_state <= current_state;
                 end 
             end 
             FIRST_INPUT: begin                
                 if (restart_debounce) begin
-                    next_state = START;
+                    next_state <= START;
                 end else if (select_pressed) begin 
-                    next_state = SECOND_INPUT;
+                    next_state <= SECOND_INPUT;
                 end else begin
-                    next_state = current_state;
+                    next_state <= current_state;
                 end
             end 
             SECOND_INPUT:begin
                 if (restart_debounce) begin
-                    next_state = START;
+                    next_state <= START;
                 end else if (select_pressed) begin 
-                    next_state = SELECTION;
+                    next_state <= SELECTION;
                 end else begin
-                    next_state = current_state;
+                    next_state <= current_state;
                 end 
             end
             SELECTION: begin
                 if (restart_debounce) begin
-                    next_state = START;
+                    next_state <= START;
                 end else if (select_pressed) begin 
-                    next_state = FINAL;
+                    next_state <= FINAL;
                 end else begin
-                    next_state = current_state;
+                    next_state <= current_state;
                 end 
             end
             FINAL: begin
                 if (restart_debounce) begin
-                    next_state = START;
+                    next_state <= START;
                 end else if (select_pressed) begin 
-                    next_state = START;
+                    next_state <= START;
                 end else begin
-                    next_state = current_state;
+                    next_state <= current_state;
                 end 
             end
         endcase

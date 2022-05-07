@@ -1,0 +1,17 @@
+
+Input: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_13.21.59/results/routing/PrimitiveCalculator.def
+Output: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_13.21.59/results/finishing/PrimitiveCalculator.klayout.gds
+Design: PrimitiveCalculator
+Technology File: /home/emre/ASIC/pdk/sky130A/libs.tech/klayout/sky130A.lyt
+GDS File List: ['/home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds']
+LEF File: /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_13.21.59/tmp/merged.lef
+
+[INFO] Clearing cells...
+[INFO] Merging GDS files...
+	/home/emre/ASIC/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+[INFO] Copying toplevel cell 'PrimitiveCalculator'
+WARNING: no fill config file specified
+[INFO] Checking for missing GDS...
+[INFO] All LEF cells have matching GDS cells
+[INFO] Writing out GDS '/openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_13.21.59/results/finishing/PrimitiveCalculator.klayout.gds'
+[INFO] Done.

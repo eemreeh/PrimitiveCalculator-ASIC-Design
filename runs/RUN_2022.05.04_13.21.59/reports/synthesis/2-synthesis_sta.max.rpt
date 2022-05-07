@@ -1,0 +1,218 @@
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+Startpoint: _1835_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_out[5] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.57    0.00    0.00 ^ _1835_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.22    0.58    0.58 ^ _1835_/Q (sky130_fd_sc_hd__dfxtp_2)
+     4    0.04                           seven_segment_digit (net)
+                  0.22    0.00    0.59 ^ _1488_/S (sky130_fd_sc_hd__mux2_2)
+                  0.06    0.39    0.98 v _1488_/X (sky130_fd_sc_hd__mux2_2)
+     3    0.01                           _0749_ (net)
+                  0.06    0.00    0.98 v _1489_/A (sky130_fd_sc_hd__buf_1)
+                  0.07    0.13    1.11 v _1489_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _0750_ (net)
+                  0.07    0.00    1.12 v _1504_/A (sky130_fd_sc_hd__or2b_2)
+                  0.05    0.31    1.42 v _1504_/X (sky130_fd_sc_hd__or2b_2)
+     2    0.00                           _0763_ (net)
+                  0.05    0.00    1.42 v _1512_/C (sky130_fd_sc_hd__and3_2)
+                  0.04    0.21    1.64 v _1512_/X (sky130_fd_sc_hd__and3_2)
+     1    0.00                           _0768_ (net)
+                  0.04    0.00    1.64 v _1513_/C1 (sky130_fd_sc_hd__a311o_2)
+                  0.05    0.31    1.95 v _1513_/X (sky130_fd_sc_hd__a311o_2)
+     1    0.00                           _0769_ (net)
+                  0.05    0.00    1.95 v _1514_/B1 (sky130_fd_sc_hd__a31o_2)
+                  0.12    0.30    2.25 v _1514_/X (sky130_fd_sc_hd__a31o_2)
+     1    0.03                           seven_segment_out[5] (net)
+                  0.12    0.00    2.25 v seven_segment_out[5] (out)
+                                  2.25   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -2.25   data arrival time
+-----------------------------------------------------------------------------
+                                  5.50   slack (MET)
+
+
+Startpoint: _1835_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_out[2] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.57    0.00    0.00 ^ _1835_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.22    0.58    0.58 ^ _1835_/Q (sky130_fd_sc_hd__dfxtp_2)
+     4    0.04                           seven_segment_digit (net)
+                  0.22    0.00    0.59 ^ _1478_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.25    0.83 ^ _1478_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _0739_ (net)
+                  0.22    0.00    0.84 ^ _1482_/B_N (sky130_fd_sc_hd__or2b_2)
+                  0.06    0.35    1.19 v _1482_/X (sky130_fd_sc_hd__or2b_2)
+     2    0.01                           _0743_ (net)
+                  0.06    0.00    1.19 v _1483_/B1 (sky130_fd_sc_hd__o21a_2)
+                  0.04    0.13    1.32 v _1483_/X (sky130_fd_sc_hd__o21a_2)
+     2    0.00                           _0744_ (net)
+                  0.04    0.00    1.32 v _1484_/A (sky130_fd_sc_hd__buf_1)
+                  0.09    0.14    1.45 v _1484_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _0745_ (net)
+                  0.09    0.00    1.46 v _1505_/B (sky130_fd_sc_hd__or3_2)
+                  0.08    0.47    1.93 v _1505_/X (sky130_fd_sc_hd__or3_2)
+     1    0.00                           _0764_ (net)
+                  0.08    0.00    1.93 v _1506_/B1 (sky130_fd_sc_hd__o31a_2)
+                  0.14    0.19    2.12 v _1506_/X (sky130_fd_sc_hd__o31a_2)
+     1    0.03                           seven_segment_out[2] (net)
+                  0.14    0.00    2.12 v seven_segment_out[2] (out)
+                                  2.12   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -2.12   data arrival time
+-----------------------------------------------------------------------------
+                                  5.63   slack (MET)
+
+
+Startpoint: _1835_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_out[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.57    0.00    0.00 ^ _1835_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.22    0.58    0.58 ^ _1835_/Q (sky130_fd_sc_hd__dfxtp_2)
+     4    0.04                           seven_segment_digit (net)
+                  0.22    0.00    0.59 ^ _1478_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.25    0.83 ^ _1478_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _0739_ (net)
+                  0.22    0.00    0.84 ^ _1479_/S (sky130_fd_sc_hd__mux2_2)
+                  0.06    0.40    1.24 v _1479_/X (sky130_fd_sc_hd__mux2_2)
+     3    0.01                           _0740_ (net)
+                  0.06    0.00    1.24 v _1498_/B (sky130_fd_sc_hd__and3b_2)
+                  0.05    0.22    1.46 v _1498_/X (sky130_fd_sc_hd__and3b_2)
+     3    0.01                           _0758_ (net)
+                  0.05    0.00    1.46 v _1499_/B (sky130_fd_sc_hd__and2_2)
+                  0.05    0.21    1.68 v _1499_/X (sky130_fd_sc_hd__and2_2)
+     2    0.01                           _0759_ (net)
+                  0.05    0.01    1.68 v _1502_/A (sky130_fd_sc_hd__nor2_2)
+                  0.41    0.33    2.01 ^ _1502_/Y (sky130_fd_sc_hd__nor2_2)
+     1    0.03                           seven_segment_out[1] (net)
+                  0.41    0.00    2.01 ^ seven_segment_out[1] (out)
+                                  2.01   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -2.01   data arrival time
+-----------------------------------------------------------------------------
+                                  5.74   slack (MET)
+
+
+Startpoint: _1835_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_out[0] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.57    0.00    0.00 ^ _1835_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.22    0.58    0.58 ^ _1835_/Q (sky130_fd_sc_hd__dfxtp_2)
+     4    0.04                           seven_segment_digit (net)
+                  0.22    0.00    0.59 ^ _1478_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.25    0.83 ^ _1478_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _0739_ (net)
+                  0.22    0.00    0.84 ^ _1479_/S (sky130_fd_sc_hd__mux2_2)
+                  0.06    0.40    1.24 v _1479_/X (sky130_fd_sc_hd__mux2_2)
+     3    0.01                           _0740_ (net)
+                  0.06    0.00    1.24 v _1486_/A (sky130_fd_sc_hd__buf_1)
+                  0.08    0.15    1.39 v _1486_/X (sky130_fd_sc_hd__buf_1)
+     5    0.01                           _0747_ (net)
+                  0.08    0.00    1.39 v _1492_/A1 (sky130_fd_sc_hd__a31o_2)
+                  0.04    0.22    1.61 v _1492_/X (sky130_fd_sc_hd__a31o_2)
+     1    0.00                           _0753_ (net)
+                  0.04    0.00    1.62 v _1497_/A2 (sky130_fd_sc_hd__a22o_2)
+                  0.14    0.33    1.95 v _1497_/X (sky130_fd_sc_hd__a22o_2)
+     1    0.03                           seven_segment_out[0] (net)
+                  0.14    0.00    1.95 v seven_segment_out[0] (out)
+                                  1.95   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -1.95   data arrival time
+-----------------------------------------------------------------------------
+                                  5.80   slack (MET)
+
+
+Startpoint: _1835_ (rising edge-triggered flip-flop)
+Endpoint: seven_segment_out[3] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.57    0.00    0.00 ^ _1835_/CLK (sky130_fd_sc_hd__dfxtp_2)
+                  0.22    0.58    0.58 ^ _1835_/Q (sky130_fd_sc_hd__dfxtp_2)
+     4    0.04                           seven_segment_digit (net)
+                  0.22    0.00    0.59 ^ _1478_/A (sky130_fd_sc_hd__buf_1)
+                  0.22    0.25    0.83 ^ _1478_/X (sky130_fd_sc_hd__buf_1)
+     5    0.02                           _0739_ (net)
+                  0.22    0.00    0.84 ^ _1479_/S (sky130_fd_sc_hd__mux2_2)
+                  0.06    0.40    1.24 v _1479_/X (sky130_fd_sc_hd__mux2_2)
+     3    0.01                           _0740_ (net)
+                  0.06    0.00    1.24 v _1498_/B (sky130_fd_sc_hd__and3b_2)
+                  0.05    0.22    1.46 v _1498_/X (sky130_fd_sc_hd__and3b_2)
+     3    0.01                           _0758_ (net)
+                  0.05    0.00    1.46 v _1499_/B (sky130_fd_sc_hd__and2_2)
+                  0.05    0.21    1.68 v _1499_/X (sky130_fd_sc_hd__and2_2)
+     2    0.01                           _0759_ (net)
+                  0.05    0.01    1.68 v _1507_/A (sky130_fd_sc_hd__inv_2)
+                  0.03    0.05    1.73 ^ _1507_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _0765_ (net)
+                  0.04    0.01    1.74 ^ _1508_/C1 (sky130_fd_sc_hd__o221ai_2)
+                  0.25    0.19    1.93 v _1508_/Y (sky130_fd_sc_hd__o221ai_2)
+     1    0.03                           seven_segment_out[3] (net)
+                  0.25    0.00    1.93 v seven_segment_out[3] (out)
+                                  1.93   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -1.93   data arrival time
+-----------------------------------------------------------------------------
+                                  5.82   slack (MET)
+
+

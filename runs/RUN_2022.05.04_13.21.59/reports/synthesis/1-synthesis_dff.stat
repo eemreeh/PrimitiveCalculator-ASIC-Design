@@ -1,0 +1,27 @@
+
+21. Printing statistics.
+
+=== PrimitiveCalculator ===
+
+   Number of wires:               1269
+   Number of wire bits:           1380
+   Number of public wires:          35
+   Number of public wire bits:     115
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1257
+     $_ANDNOT_                     400
+     $_AND_                         77
+     $_MUX_                        129
+     $_NAND_                        41
+     $_NOR_                         57
+     $_NOT_                         51
+     $_ORNOT_                       35
+     $_OR_                         194
+     $_XNOR_                        35
+     $_XOR_                        137
+     sky130_fd_sc_hd__dfxtp_2       63
+     sky130_fd_sc_hd__dlxtn_1       36
+     sky130_fd_sc_hd__dlxtp_1        2
+
