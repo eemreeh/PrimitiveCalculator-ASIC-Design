@@ -54,7 +54,7 @@ module PrimitiveCalculator (
     reg [2:0] alu_select;
     wire [7:0] alu_out;
     wire alu_flag;
-    PrimitiveALU alu(.rst(rst), .load(alu_load), .in_a(alu_in_a_r), .in_b(alu_in_b_r), .select(alu_select), .out(alu_out), .flag(alu_flag));
+    PrimitiveALU alu(.clk(clk), .rst(rst), .load(alu_load), .in_a(alu_in_a_r), .in_b(alu_in_b_r), .select(alu_select), .out(alu_out), .flag(alu_flag));
 
     // calculator itself
     reg [2:0] current_state; 
@@ -123,8 +123,8 @@ module PrimitiveCalculator (
                 seven_segment_tens = 4'b0;
                 seven_segment_units = 4'b0;
                 alu_load = 1'b0;
-                alu_in_a_r <= 8'b0; 
-                alu_in_b_r <= 8'b0;
+                alu_in_a_r = 8'b0; 
+                alu_in_b_r = 8'b0;
                 led_flag = 1'b0;
             end
             FIRST_INPUT: begin

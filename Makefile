@@ -24,7 +24,7 @@ test_HexSevenSegmentDecoder:
 	rm -rf sim_build/
 	mkdir sim_build/
 	iverilog -o sim_build/sim.vvp -s HexSevenSegmentDecoder -s dump -g2012 src/HexSevenSegmentDecoder.v test/dump_HexSevenSegmentDecoder.v
-	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.HexSevenSegmentDecoder vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
+	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_HexSevenSegmentDecoder vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 	! grep failure results.xml
 
 test_Debouncer:
@@ -38,7 +38,7 @@ test_PrimitiveALU:
 	rm -rf sim_build/
 	mkdir sim_build/
 	iverilog -o sim_build/sim.vvp -s PrimitiveALU -s dump -g2012 src/PrimitiveALU.v test/dump_PrimitiveALU.v
-	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.PrimitiveALU vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
+	PYTHONOPTIMIZE=${NOASSERT} MODULE=test.test_PrimitiveALU vvp -M $$(cocotb-config --prefix)/cocotb/libs -m libcocotbvpi_icarus sim_build/sim.vvp
 	! grep failure results.xml
 
 test_RotaryEncoder:
