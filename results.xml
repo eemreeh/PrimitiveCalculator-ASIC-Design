@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1652098455" />
+    <testcase name="test_RotaryEncoder" classname="test.test_RotaryEncoder" file="/home/emre/ASIC/openlane/designs/PrimitiveCalculator/test/test_RotaryEncoder.py" lineno="16" time="0.7324373722076416" sim_time_ns="51090001.0" ratio_time="69753405.46319951" />
+  </testsuite>
+</testsuites>
