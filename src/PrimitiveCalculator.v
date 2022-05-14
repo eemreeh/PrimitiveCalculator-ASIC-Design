@@ -17,7 +17,8 @@ module PrimitiveCalculator (
 
     //clock divider if needed
     wire clk_div;
-    ClockDivider #(.REG_LEN(1)) clok_divider(.clk(clk), .rst(rst), .out(clk_div)); // no effect
+    assign clk_div = clk;
+//    ClockDivider #(.REG_LEN(1)) clok_divider(.clk(clk), .rst(rst), .out(clk_div)); // divides half
 
     // debouncing for rotary inputs and buttons
     wire rotary_a_debounce, rotary_b_debounce, restart_debounce, select_debounce;
@@ -30,7 +31,7 @@ module PrimitiveCalculator (
     reg select_d1;
     wire select_pressed;
 
-    always @(posedge clk) begin
+    always @(posedge clk_div) begin
         select_d1 <= select_debounce;
     end 
 
@@ -54,99 +55,118 @@ module PrimitiveCalculator (
     reg [2:0] alu_select;
     wire [7:0] alu_out;
     wire alu_flag;
-    PrimitiveALU alu(.clk(clk), .rst(rst), .load(alu_load), .in_a(alu_in_a_r), .in_b(alu_in_b_r), .select(alu_select), .out(alu_out), .flag(alu_flag));
+    PrimitiveALU alu(.clk(clk_div) ,.rst(rst), .load(alu_load), .in_a(alu_in_a_r), .in_b(alu_in_b_r), .select(alu_select), .out(alu_out), .flag(alu_flag));
 
     // calculator itself
     reg [2:0] current_state; 
     reg [2:0] next_state;
 
-    always @(posedge clk) begin
+    always @(posedge clk_div) begin
         if (rst) begin
-            next_state <= START;            
+            current_state <= START;            
         end else begin 
             current_state <= next_state;
         end
+    end	
 
+    always @(*) begin
         case (current_state)
             START: begin 
                 if (restart_debounce) begin
-                    next_state <= START;
+                    next_state = START;
                 end else if (select_pressed) begin 
-                    next_state <= FIRST_INPUT;
+                    next_state = FIRST_INPUT;
                 end else begin
-                    next_state <= current_state;
+                    next_state = current_state;
                 end 
             end 
             FIRST_INPUT: begin                
                 if (restart_debounce) begin
-                    next_state <= START;
+                    next_state = START;
                 end else if (select_pressed) begin 
-                    next_state <= SECOND_INPUT;
+                    next_state = SECOND_INPUT;
                 end else begin
-                    next_state <= current_state;
+                    next_state = current_state;
                 end
             end 
             SECOND_INPUT:begin
                 if (restart_debounce) begin
-                    next_state <= START;
+                    next_state = START;
                 end else if (select_pressed) begin 
-                    next_state <= SELECTION;
+                    next_state = SELECTION;
                 end else begin
-                    next_state <= current_state;
+                    next_state = current_state;
                 end 
             end
             SELECTION: begin
                 if (restart_debounce) begin
-                    next_state <= START;
+                    next_state = START;
                 end else if (select_pressed) begin 
-                    next_state <= FINAL;
+                    next_state = FINAL;
                 end else begin
-                    next_state <= current_state;
+                    next_state = current_state;
                 end 
             end
             FINAL: begin
                 if (restart_debounce) begin
-                    next_state <= START;
+                    next_state = START;
                 end else if (select_pressed) begin 
-                    next_state <= START;
+                    next_state = START;
                 end else begin
-                    next_state <= current_state;
+                    next_state = current_state;
                 end 
             end
         endcase
     end
 
-    always @(*) begin
+    always @(posedge clk) begin
         case (current_state)
             START: begin 
-                seven_segment_load = 1'b0;
-                seven_segment_tens = 4'b0;
-                seven_segment_units = 4'b0;
-                alu_load = 1'b0;
-                alu_in_a_r = 8'b0; 
-                alu_in_b_r = 8'b0;
-                led_flag = 1'b0;
+                seven_segment_load <= 1'b0;
+                seven_segment_tens <= 4'b0;
+                seven_segment_units <= 4'b0;
+                alu_load <= 1'b0;
+                alu_in_a_r <= 8'b0; 
+                alu_in_b_r <= 8'b0;
+                led_flag <= 1'b0;
+                alu_select <= 3'b0;
             end
             FIRST_INPUT: begin
-                seven_segment_load = 1'b1;
-                {seven_segment_tens, seven_segment_units} = rotary_out;
-                alu_in_a_r = rotary_out;
+                seven_segment_load <= 1'b1;
+                {seven_segment_tens, seven_segment_units} <= rotary_out;
+                alu_load <= alu_load;
+                alu_in_a_r <= rotary_out;
+                alu_in_b_r <= alu_in_b_r;
+                led_flag <= led_flag;
+                alu_select <= alu_select;
             end
             SECOND_INPUT: begin
-                seven_segment_load = 1'b1;
-                {seven_segment_tens, seven_segment_units} = rotary_out;
-                alu_in_b_r = rotary_out;
-            end 
+                seven_segment_load <= 1'b1;
+                {seven_segment_tens, seven_segment_units} <= rotary_out;
+                alu_load <= alu_load;
+                alu_in_b_r <= rotary_out;
+                alu_in_a_r <= alu_in_a_r;
+                led_flag <= led_flag;
+                alu_select <= alu_select;
+            end
             SELECTION: begin
-                seven_segment_load = 1'b1;
-                seven_segment_tens = 4'b0;
-                seven_segment_units = {1'b0, rotary_out[2:0]};
-                alu_select = rotary_out[1:0];
+                seven_segment_load <= 1'b1;
+                seven_segment_tens <= 4'b0;
+                seven_segment_units <= {1'b0, rotary_out[2:0]};
+                alu_select <= rotary_out[2:0];
+                alu_load <= alu_load;
+                alu_in_a_r <= alu_in_a_r;
+                alu_in_b_r <= alu_in_b_r;
+                led_flag <= led_flag;
             end
             FINAL: begin
                 alu_load = 1'b1;
-                {seven_segment_tens, seven_segment_units} = alu_out;
-                led_flag = alu_flag;
+                {seven_segment_tens, seven_segment_units} <= alu_out;
+                led_flag <= alu_flag;
+                alu_select <= rotary_out[2:0];
+                alu_load <= alu_load;
+                alu_in_a_r <= alu_in_a_r;
+                alu_in_b_r <= alu_in_b_r;
             end
         endcase
     end

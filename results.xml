@@ -1,8 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1652125519" />
-    <testcase name="test_PrimitiveALU" classname="test.test_PrimitiveALU" file="/home/emre/ASIC/openlane/designs/PrimitiveCalculator/test/test_PrimitiveALU.py" lineno="16" time="0.003198385238647461" sim_time_ns="75001.0" ratio_time="23449645.49414834">
-      <failure />
-    </testcase>
+    <property name="random_seed" value="1652552498" />
+    <testcase name="test_PrimitiveCalculator" classname="test.test_PrimitiveCalculator" file="/home/emre/ASIC/openlane/designs/PrimitiveCalculator/test/test_PrimitiveCalculator.py" lineno="18" time="0.04567241668701172" sim_time_ns="1475001.0" ratio_time="32295225.586769957" />
   </testsuite>
 </testsuites>
