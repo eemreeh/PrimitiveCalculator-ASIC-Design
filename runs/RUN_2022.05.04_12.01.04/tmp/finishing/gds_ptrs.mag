@@ -1,6 +1,0 @@
-<< properties >>
-string FIXED_BBOX 0 0 40000 40000
-string GDS_END 433826
-string GDS_FILE /openlane/designs/PrimitiveCalculator/runs/RUN_2022.05.04_12.01.04/results/finishing/PrimitiveCalculator.magic.gds
-string GDS_START 44406
-<< end >>

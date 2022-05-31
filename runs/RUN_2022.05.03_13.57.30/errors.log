@@ -1,6 +1,0 @@
-[ERROR]: during executing openroad script /openlane/scripts/openroad/pdn.tcl
-[ERROR]: Exit code: 1
-[ERROR]: Last 10 lines:
-child process exited abnormally
-
-[ERROR]: Flow failed.

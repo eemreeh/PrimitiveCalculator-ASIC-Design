@@ -2,6 +2,10 @@
 `timescale 1ns/1ns
 
 module PrimitiveCalculator (
+`ifdef USE_POWER_PINS
+    inout vccd1,
+    inout vssd1,
+`endif
     input wire clk,
     input wire rst,
     input wire select,
@@ -10,8 +14,13 @@ module PrimitiveCalculator (
     input wire rotary_b,
     output wire [6:0] seven_segment_out,
     output wire seven_segment_digit,
-    output reg led_flag
+    output reg led_flag,
+    output wire [9:0] io_oeb,
+    output wire sync
 );
+	
+    assign io_oeb = 10'b0;
+    assign sync = rst;
 
     localparam START = 3'b000, FIRST_INPUT = 3'b001, SECOND_INPUT = 3'b010, SELECTION = 3'b011, FINAL = 3'b100;
 
